@@ -1,0 +1,81 @@
+﻿<style type="text/css">
+    .FAQ {
+        background: url(/Sources/realImgs/others/FAQ.jpg) no-repeat;
+    }
+</style>
+<!--<link href="../Libs/Css/Custom/forSlideImg.css" rel="stylesheet" />-->
+
+<div class="row zoneSplit"></div>
+<div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+
+
+        <div class="row" ng-controller="showImgCtrl">
+            <div ng-repeat="img in imgs" ng-class="{true: 'showLPic', false: 'hideLPic'}[img.isFocus]">
+                <a href="#/"><img ng-src="{{img.imgL}}" /></a>
+            </div>
+            <div class="col-md-offset-2 picContainer">
+                <div class="pull-left" ng-repeat="img in imgs" ng-mouseover="focusItem($index)" ng-class="{true: 'showMPic', false: 'hideMPic'}[img.isFocus]">
+                    <a href="#/"><img ng-src="{{img.imgM}}" /></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt10">
+            <div class="col-md-2 " ng-controller="sideMenuCtrl">
+                <!--<div>-->
+                <div class="sideMenuHead"><i class="fa fa-list-ul fa-margin" style="margin-right:5px;"></i><strong style="color:#017fd6">产品分类</strong></div>
+                <ul class="nav sideMenu">
+                    <li ng-repeat="menu in sideMenu" ng-class="{true: 'sideMenuItemCurrent', false: 'sideMenuItem'}[menu.isFocus]" ng-mouseover="focusItem($index)" ng-mouseleave="blurItem($index)">
+                        <p class="dot">
+                            <span style="margin-right:5px">-</span><a href="{{menu.url}}">{{menu.name}}</a>
+                        </p>
+                        <ul class="row sideMenuChild dropdown-menu-right col-md-12" ng-show="menu.isFocus">
+                            <li ng-repeat="subMenu in menu.child" style="padding-top:10px">
+                                <p class="dot">
+                                    <span style="margin-right:5px">-</span><a href="{{subMenu.url}}">{{subMenu.name}}</a>
+                                </p>
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+                <!--</div>-->
+                <!--联系我们-->
+                <div class="contactUs" ng-controller="sideMenuCtrl" style="border:1px solid #dedede;margin-top:10px;display:inline-block;padding:5px 5px 5px 10px ">
+                    <i class="fa fa-user fa-margin" style="margin-right:5px;"></i><strong style="color:#017fd6">联系我们</strong><br />
+                    公司地址：湖北武汉市江夏区九凤街光谷8号工坊 1-3-601# <br />
+                    <span style="display:block;float:left">
+                        <br />
+                        电话：400-878-2170<br />
+                        传真：027-68782137<br />
+                    </span>
+                    <img ng-src="{{meinv.name}}" style="display:block;float:right;vertical-align:top; width:59px;height:90px;">
+                    <div style="clear:both;"></div>
+                    <div>
+                        <a target="blank" href="tencent://message/?uin=57958758&amp;Site=%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D&amp;Menu=yes"><img src="{{meinv.qq1}}" /></a>
+                        <a target="blank" href="tencent://message/?uin=162130999&amp;Site=%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D&amp;Menu=yes"><img src="{{meinv.qq2}}" /></a>
+                        <a target="blank" href="tencent://message/?uin=840101051&amp;Site=%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D&amp;Menu=yes"><img src="{{meinv.qq1}}" /></a>
+                        <a target="blank" href="tencent://message/?uin=393968345&amp;Site=%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D&amp;Menu=yes"><img src="{{meinv.qq2}}" /></a>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="sideMenuHead"><i class="fa  fa-th-large fa-margin" style="margin-right:5px;"></i><strong style="color:#017fd6">产品展示</strong></div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+    <div class="col-md-1">
+
+    </div>
+</div>

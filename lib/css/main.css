@@ -1,0 +1,42 @@
+﻿body {
+    background: url(../image/bg_head.png) repeat-x scroll left top #f4f4f4;
+    color: #666666;
+    /*font:24px 宋体,Arial,Verdana;*/
+}
+
+dl {
+margin-top: 0;
+margin-bottom: 0px;
+}
+
+
+.bartop {
+    background: url(../image/bg_tit.png) repeat-x scroll left top;
+    border: 1px solid #dedede;
+    line-height: 30px;
+    font-size: 14px;
+    color: #0066ae;
+    font-family: 微软雅黑;
+    margin-top:5px;
+}
+
+    .bartop strong {
+        padding-left: 11px;
+        font-size: 12px;
+        color: #017fd6;
+    }
+
+.listbox {
+    padding: 5px 10px 10px 10px;
+    border: 1px solid #EBE5E5;
+}
+
+.listbox a {
+    text-indent: 15px;
+    color: #333333;
+    display: block;
+    line-height: 35px;
+    background: url(../image/bg_dian.gif) repeat-x scroll left bottom;
+    font-size: 12px;
+    font-weight:normal;
+}
