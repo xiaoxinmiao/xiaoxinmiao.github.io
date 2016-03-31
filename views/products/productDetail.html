@@ -1,10 +1,14 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-	<meta charset="utf-8" />
-</head>
-<body>
-
-</body>
-</html>
+﻿<div class="row" ng-controller="productsListCtrl">
+    <div class=" col-md-offset-2 col-md-7">
+        <span>{{productsCategory.title}}</span>
+        <hr />
+        <p align="center">
+            <img ng-src="{{productsCategory.imgUrl}}" />
+        </p>
+        <p></p>
+        <p><font style="font-size:16px;font-weight:bold;color:#000">产品详情</font></p>
+        <p></p>
+        <div ng-bind-html="productsCategory.detailDesc">
+        </div>
+    </div>
+</div>
