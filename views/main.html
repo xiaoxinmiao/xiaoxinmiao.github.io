@@ -60,13 +60,21 @@
                         <a target="blank" href="tencent://message/?uin=162130999&amp;Site=%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D&amp;Menu=yes"><img src="{{meinv.qq2}}" /></a>
                         <a target="blank" href="tencent://message/?uin=840101051&amp;Site=%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D&amp;Menu=yes"><img src="{{meinv.qq1}}" /></a>
                         <a target="blank" href="tencent://message/?uin=393968345&amp;Site=%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D&amp;Menu=yes"><img src="{{meinv.qq2}}" /></a>
-                       
+
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-8" ng-controller="productsListCtrl">
                 <div class="sideMenuHead"><i class="fa  fa-th-large fa-margin" style="margin-right:5px;"></i><strong style="color:#017fd6">产品展示</strong></div>
+                <div class="pro_txt">
+                    <div class="meq" id="marquee" ng-repeat="prod in productsList">
+                        <dl>
+                            <dt><a class="img_mid" title="{{prod.name}}" href="#/"><img alt="{{prod.name}}" src="{{prod.imgUrl}}" width="130" height="113"></a></dt>
+                            <dd><a class="img_font" title="{{prod.name}}" href="#/"><strong>{{prod.name}}</strong></a><p>{{prod.desc}}</p><a class="img_more" href="#/">more &gt;&gt;</a></dd>
+                        </dl>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -79,3 +87,4 @@
 
     </div>
 </div>
+<script type="text/javascript"> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5a759e1d69ca1139993f3d27bfa7c0e0' type='text/javascript'%3E%3C/script%3E")) </script>
