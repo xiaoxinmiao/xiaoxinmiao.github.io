@@ -70,7 +70,7 @@
                 <div class="pro_txt">
                     <div class="meq" id="marquee" ng-repeat="prod in productsList">
                         <dl>
-                            <dt><a class="img_mid" title="{{prod.name}}" href="#/productDetail/{{prod.id}}"><img alt="{{prod.name}}" src="{{prod.imgUrl}}" width="130" height="113"></a></dt>
+                            <dt><a class="img_mid" title="{{prod.name}}" href="#/productDetail/{{prod.id}}"><img alt="{{prod.name}}" ng-src="{{prod.imgUrl}}" width="130" height="113" /></a></dt>
                             <dd><a class="img_font" title="{{prod.name}}" href="#/productDetail/{{$index+1}}"><strong>{{prod.name}}</strong></a><p>{{prod.desc}}</p><a class="img_more" href="#/productList">more &gt;&gt;</a></dd>
                         </dl>
                     </div>
