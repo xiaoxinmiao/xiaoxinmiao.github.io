@@ -1,6 +1,24 @@
 ﻿<div class="row zoneSplit"></div>
 <div class="row" ng-controller="newsDetailCtrl">
     <div class="col-md-offset-1 col-md-2 sideMenuAndSlideImg zone">
+        <div class="sideMenuHead"><i class="fa fa-list-ul fa-margin" style="margin-right:5px;"></i><strong style="color:#017fd6">产品分类</strong></div>
+        <ul class="nav sideMenu">
+            <li ng-repeat="menu in sideMenu" ng-class="{true: 'sideMenuItemCurrent', false: 'sideMenuItem'}[menu.isFocus]" ng-mouseover="focusItem($index)" ng-mouseleave="blurItem($index)">
+                <p class="dot">
+                    <span style="margin-right:5px">-</span><a href="{{menu.url}}">{{menu.name}}</a>
+                </p>
+                <ul class="row sideMenuChild dropdown-menu-right col-md-12" ng-show="menu.isFocus">
+                    <li ng-repeat="subMenu in menu.child" style="padding-top:10px">
+                        <p class="dot">
+                            <span style="margin-right:5px">-</span><a href="{{subMenu.url}}">{{subMenu.name}}</a>
+                        </p>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+
+
         <h3><i class="fa fa-list-ul fa-margin" style="color: #d7000f;padding-left:10px;"></i>新闻中心</h3>
         <div class="sideMenu">
             <div ng-repeat="menu in sideMenu" class="qaCategory sideMenuItem" ng-click="changeCategory($index)" style="cursor:pointer;">
