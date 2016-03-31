@@ -29,6 +29,7 @@ bld/
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
+[Ww]eb.config
 
 # NUNIT
 *.VisualState.xml
@@ -234,3 +235,4 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
