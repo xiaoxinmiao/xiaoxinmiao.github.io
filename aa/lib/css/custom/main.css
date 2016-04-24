@@ -1,0 +1,25 @@
+﻿body {
+    background: url(../../../sources/images/main/topbj.png) repeat-x scroll left top #f4f4f4;
+    background-size: 23px 78px;
+    color: #666666;
+    /*font:24px 宋体,Arial,Verdana;*/
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.navbarbj {
+    background: url(../../../sources/images/main/navbarbj.png) repeat-x scroll left top #fff;
+    background-size: 23px 50px;
+}
+
+.bodybj {
+    background: url(../../../sources/images/main/body.png) repeat-x scroll left top #f4f4f4;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+

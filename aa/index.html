@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>My Web</title>
+
+
+
+    <script src="lib/js/angular/angular.js"></script>
+    <script src="lib/js/angular/angular-route.js"></script>
+    <script src="lib/js/angular/angular-sanitize.js"></script>
+    <!--<script src="lib/js/bootstrap3/bootstrap.js"></script>-->
+    <script src="lib/js/angular/angular-animate.js"></script>
+
+    <script src="lib/app.js"></script>
+
+    <script src="lib/services/newsDataService.js"></script>
+    <script src="lib/services/ourDataService.js"></script>
+    <script src="lib/services/productsDataService.js"></script>
+    <script src="lib/services/jobsDataService.js"></script>
+
+    <script src="lib/ctrls/ctrls.js"></script>
+    <script src="lib/ctrls/mainCtrl.js"></script>
+    <script src="lib/ctrls/aboutUs/ourCtrls.js"></script>
+    <script src="lib/ctrls/news/newsCtrls.js"></script>
+    <script src="lib/ctrls/products/productsCtrls.js"></script>
+    <script src="lib/ctrls/jobs/jobsCtrls.js"></script>
+
+    <link href="lib/css/custom/bootstrap.css" rel="stylesheet" />
+    <link href="lib/css/webfont/awesome-4.1.0/font-awesome.css" rel="stylesheet" />
+    <link href="lib/css/custom/main.css" rel="stylesheet" />
+    <link href="lib/css/custom/slideImg.css" rel="stylesheet" />
+    <link href="lib/css/custom/animate.css" rel="stylesheet" />
+    <link href="lib/css/custom/sidebar.css" rel="stylesheet" />
+
+</head>
+<body ng-app="appMain">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-sm-2">
+
+            </div>
+            <div class="col-md-6  col-sm-6">
+                <div class="row ">
+                    <div class="col-md-3  col-sm-3">
+                        <img src="sources/images/logo/logo.png" />
+                    </div>
+                  
+                </div>
+
+            </div>
+            <div class="col-md-4  col-sm-4">
+                <div class="pull-right">
+                    <img src="sources/images/logo/20141213.jpg" />
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-controller="navbarCtrl" style="top: 35px; ">
+            <nav class="navbar navbar-inverse navbarbj" style="border-color:transparent">
+                <div class="collapse navbar-collapse col-md-offset-2">
+                    <ul class="nav navbar-nav">
+                        <li ng-repeat="menu in topMenu" ng-class="{true:'dropdown',false:''}[menu.child!=null]">
+                            <a href="{{menu.url}}">{{menu.name}}<span class="caret" ng-show="menu.child!=null"></span></a>
+                            <!--<ul class="dropdown-menu">
+                                <li ng-repeat="cm in menu.child"><a href="{{cm.url}}">{{cm.name}}</a></li>
+                            </ul>-->
+                            <ul class="dropdown-menu" ng-if="menu.child!=null">
+                                <li ng-repeat="submenu in menu.child"><a href="{{submenu.url}}">{{submenu.name}}</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="slide" ng-view=""></div>
+
+    </div>
+    <div class="footer navbar-fixed-bottom" style="margin-bottom:5px;">
+        <div style="text-align: center;">
+            ©2016 北京衣念科技发展有限公司 版权所有丨朝阳区酒仙桥恒通商务园B51丨111-2222-333
+        </div>
+    </div>
+</body>
+</html>
